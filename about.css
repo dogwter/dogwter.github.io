@@ -1,0 +1,89 @@
+.info{
+    width: 100%;
+    height: 150%;
+}
+
+.info-title{
+    padding-top: 3rem;
+    padding-left: 5rem;
+    font-size: 3rem;
+    color: #B6EADA;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.grid{
+    display: grid;
+    font-size: 1.5rem;
+    grid-template-columns: 1fr 5fr 5fr;
+    padding-bottom: 3rem;
+}
+
+.grid-line{
+    background: linear-gradient(#343a40, #B6EADA);
+    width: 2.5%;
+    margin-left: 5rem;
+}
+
+.grid-title1{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    color: #FFFFFF;
+}
+
+.grid-title2{
+    padding-top: 1rem;
+}
+
+.contact{
+    text-align: center;
+    background-color: #242031;
+    padding-bottom: 2.5rem;
+}
+
+.subtitle{
+    padding-left: 5rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.info-body{
+    padding-left: 5rem;
+    padding-right: 20rem;
+    margin-bottom: 2rem;
+}
+
+.grid-body{
+    font-size: 1rem;
+    padding-top: 0.25rem;
+    color: #afc0d1;
+}
+
+.contact-title{
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #B6EADA;
+    padding-bottom: 0.5rem;
+}
+.contact-button{
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border-radius: 15px;
+    border: 2px solid #B6EADA;
+    height: 50px;
+}
+
+.contact-button:focus,
+.contact-button:hover {
+    background: #B6EADA;
+}
+
+.contact-button:focus .button-text,
+.contact-button:hover .button-text{
+    color: #242031;
+}
+.button-text{
+    color: #B6EADA;
+    text-decoration: none;
+}
+
