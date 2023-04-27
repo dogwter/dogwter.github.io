@@ -57,3 +57,37 @@
 .basics:hover {
     color: #FFFFFF;
 }
+
+.body{
+    color: #cae7f4bb;
+}
+
+.body em{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.body b{
+    font-style: normal;
+    font-weight: 200;
+    font-family: var(--my-font-monospace);
+    color: #FFFFFF;
+    background-color:#24203199;
+}
+
+.spacer{
+    padding-top: 0.25rem;
+}
+.codes{
+    background: #24203199;
+    border: 1px solid #B6EADA99;
+    border-left: 5px solid #B6EADA;
+    border-radius: 5px;
+    font-family: var(--my-font-monospace);
+}
+
+.codes b{
+    font-weight: 200;
+    color: #cae7f4bb;
+}

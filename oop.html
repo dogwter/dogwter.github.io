@@ -55,12 +55,45 @@
   <div class="tutorial">
     <div class ="tutorial-body" style="float:left">
       <p class = tutorial-title>OOP</p>
-      <a class = "basics">Object Oriented Programming</a>
-    </div>
+      <a class = "basics" id = "basic">Object Oriented Programming</a>
+      <p></p>
+        <p class = "body">Java is an Object-Oriented Programming language. It utilizes <em>objects</em> and <em>classes</em> to run applications.</p>
+        <p class = "body">An <em>object</em> is a piece of software with attributes in the form of variables.<br>
+          It is an instance of a <em>class</em>, and must be created before it is called or executed. <br>
+          To create an object, a <em>constructor</em> is used. The constructor has the same name as the class and can take parameters. <br>
+          The <em>new</em> keyword is used to create an object with a constructor.</p>
+        <p class = "body">A <em>method</em> is the behavior of an object. When methods are run, the object performs an action. Methods can take parameters, return values, both, or neither. A method with no return value is declared as <em>void</em>. </p>
+        <p class = "body">A <em>variable</em> is a specific attribute or characteristic of an object. Variables can be private or public, with private variables being inaccessible outside of the class they are in.</p>
+        <p class = "body">To access an object's variables and methods, dot notation is used. This is in the form <b>objectName.variableName</b> or <b>objectName.methodName</b>.</p>
+        <p class = "spacer"> </p>
+        <pre class = "codes">
+          <code>
+    public class HelloWorld {	<b>// class HelloWorld which creates HelloWorld object</b>
+
+      private int exampleInt;	<b>// private attribute of the HelloWorld object</b>
+            
+      public HelloWorld {	<b>// HelloWorld Constructor Method</b>
+            
+      }
+            
+      public void exampleMethod(int x){	<b>// method of object HelloWorld with parameter int x and return type void</b>
+        exampleInt = 0;
+      }
+              
+      public static void main(String[]args){
+        HelloWorld h = new HelloWorld(); <b>// creating a new HelloWorld object using the constructor method</b>
+        h.exampleMethod(1);	<b>// calling the exampleMethod method of object h with dot notation</b>
+      }
+
+    }
+          </code>
+        </pre>
+
+      </div>
 
     <div class = "tutorial-nav">
       <p class = "nav-subtitle">JUMP TO</p>
-      <a class = "nav-option" href="#basics"> The Basics</a>
+      <a class = "nav-option" href="#basic"> The Basics</a>
       <a class = "nav-option" href="#"> Inheritance</a>
       <a class = "nav-option" href="#"> Polymorphism</a>
       <a class = "nav-option" href="#"> Syntax</a>
