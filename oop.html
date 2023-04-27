@@ -55,7 +55,7 @@
   <div class="tutorial">
     <div class ="tutorial-body" style="float:left">
       <p class = tutorial-title>OOP</p>
-      <a class = "basics" id = "basic">Object Oriented Programming</a>
+      <a class = "basics">Object Oriented Programming</a>
       <p></p>
         <p class = "body">Java is an Object-Oriented Programming language. It utilizes <em>objects</em> and <em>classes</em> to run applications.</p>
         <p class = "body">An <em>object</em> is a piece of software with attributes in the form of variables.<br>
@@ -85,23 +85,116 @@
         h.exampleMethod(1);	<b>// calling the exampleMethod method of object h with dot notation</b>
       }
 
-    }
-          </code>
+    }</code>
         </pre>
+        <p><br></p>
+        <a class = "basics" id = "inheritance">Inheritance</a>
+        <p></p>
+        <p class = "body">In OOP, there exist <em>subclasses</em> derived from parent classes. <br> These subclasses are written in the notation <b>public class subClass extends parentClass</b>.</p>
+        <p class = "body">The <em>extends</em> keyword allows the subclass to inherit all the methods and properties of the parent class. The subclass can override the methods of the parent or superclass by redeclaring the method with the same name. Additionally, the subclass can further have its own properties and methods specific to that subclass. Variables and/or methods private to subclasses are said to be encapsulated.</p>
+        <p class = "body">The <em>super</em> keyword allows the subclass to call methods or constructors from the superclass.</p>
+        <p class = "spacer"> </p>
+        <pre class = "codes">
+          <code>
+    public class class1(){
+      public void method1(){
+        System.out.println("Hi");
+      }
+    }
+            
+    public class class2 extends class1(){
+      public void method2{
+        super.method1();	<b>// calls method1 from the superclass and prints "Hi"</b>
+        System.out.println("Hi again");
+      }
+    }</code>
+        </pre>
+        <p class = "spacer"> </p>
+        <p class = subtitle>Set / Get Methods</p>
+        <p class = "body">Set / get methods are used to access or change attributes which are encapsulated. This protects the variables without directly altering them.</p>
+        <p class = "spacer"> </p>
+        <pre class = "codes">
+          <code>
+    private int x; <b>// private variable</b>
 
-      </div>
+    public int getX(){ <b>// this method allows x to be accessed outside of its class</b>
+	    return x;
+    }
+
+    public void setX(int val){ <b>// this method allows x to be changed outside of its class</b>
+	    x = val;
+    }</code>
+      </pre>
+      <p class = "spacer"> </p>
+      <p class = subtitle>"This" Keyword</p>
+      <p class = "body">The <b>this</b> keyword is used to distinguish between variables or methods which have the same name. Using <b>this</b> for a variable or method refers to the variable or method in the current class, as opposed to the parent.</p>
+      <p class = "spacer"> </p>
+        <pre class = "codes">
+          <code>
+    public class Class1{
+      private int x = 0;
+            
+      public Class1(){
+        System.out.println("Hi");
+      }
+          
+      public Class1(String str){
+        this(); <b> // prints "Hi"</b>
+        System.out.println(str);
+      }
+    }</code>
+        </pre>
+        <p><br></p>
+        <a class = "basics" id = "polymorphism">Polymorphism</a>
+        <p></p>
+        <p class = "body">Constructors and methods in Java may be overloaded or overridden.</p>
+        <p class = "body"><em>Overloading</em> means that multiple instances of a constructor or method may be declared with the same name but different parameters. Parameters may differ in number or type, but must be named the same.</p>
+        <p class = "body"><em>Overriding</em> means that a subclass can redefine a previously existing method from a parent class.</p>
+        <p class = "body">At runtime, Java will find the appropriate method version to use.</p>
+        <p class = "body">For example, here are three overloaded methods with the same name:</p>
+        <p class = "spacer"> </p>
+        <pre class = "codes">
+          <code>
+    public void overloadedMethod();
+
+    public void overloadedMethod(int x);
+
+    public void overloadedMethod(String x, boolean y);</code>
+        </pre>
+        <p class = "spacer"> </p>
+        <p class = "body">Note that the name of the first overloaded parameter is always x.</p>
+        <p class = "body">Overloading allows the same method to be called with different parameters. This can be used to create a default constructor.</p>
+        <p class = "spacer"></p>
+        <a class = "basics" id = "syntax">Basic Syntax</a>
+        <p></p>
+        <p class = "body">Class names must begin with a capital letter and then follow camelCase.</p>
+        <p class = "body">Method and variable names must begin with a lowercase letter and then follow camelCase.</p>
+        <p class = "spacer"> </p>
+        <pre class = "codes">
+          <code>
+    public class H<b>ello</b>W<b>orld</b>
+
+    public void e<b>xample</b>M<b>ethod</b></code>
+        </pre>
+        <p><br></p>
+        <a class = "basics" id = "tips">Tips</a>
+        <p></p>
+        <p class = "body">Classes, methods, and variables cannot be named <em>reserved</em> words such as int, void, etc.</p>
+        <p class = "body">Use simple, short names which still allow the purpose of the class, method, or variable to be identifiable.</p>
+        <p><br></p>
+    </div>
 
     <div class = "tutorial-nav">
       <p class = "nav-subtitle">JUMP TO</p>
-      <a class = "nav-option" href="#basic"> The Basics</a>
-      <a class = "nav-option" href="#"> Inheritance</a>
-      <a class = "nav-option" href="#"> Polymorphism</a>
-      <a class = "nav-option" href="#"> Syntax</a>
+      <a class = "nav-option" href="#"> The Basics</a>
+      <a class = "nav-option" href="#inheritance"> Inheritance</a>
+      <a class = "nav-option" href="#polymorphism"> Polymorphism</a>
+      <a class = "nav-option" href="#syntax"> Syntax</a>
       <a class = "nav-option" href="#"> Tips</a>
     </div>
 
   </div>
-
+  <div class = "footer"> copyright 2023 ahuang</div>
     
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

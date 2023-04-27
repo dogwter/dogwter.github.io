@@ -70,8 +70,8 @@
 
 .body b{
     font-style: normal;
-    font-weight: 200;
-    font-family: var(--my-font-monospace);
+    font-weight: 50;
+    font-family: Consolas;
     color: #FFFFFF;
     background-color:#24203199;
 }
@@ -90,4 +90,16 @@
 .codes b{
     font-weight: 200;
     color: #cae7f4bb;
+}
+
+.subtitle{
+    color:#B6EADA;
+    font-weight: 600;
+}
+
+.footer{
+    text-align: center;
+    background-color: #242031;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
