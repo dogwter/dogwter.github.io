@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
     <link rel="stylesheet" href="oop.css">
     <link rel="stylesheet" href="nav.css">
 </head>
@@ -55,7 +55,7 @@
       <a class = "basics">Arrays</a>
       <p></p>
       <p class = "body">Arrays allow multiple values of the same type to be stored together, instead of using individual variables for each value.<br>In Java, arrays are objects.</p>
-      <p class = "body">The individual values stored are referred to as elements of the array. The number of an individual element in an array is called an index. As with strings, indexes begin counting at 0.</p>
+      <p class = "body">The individual values stored are referred to as <em>elements</em> of the array. The number of an individual element in an array is called an <em>index</em>. As with strings, indexes begin counting at 0.</p>
       <p class = "spacer"> </p>
       <pre class = "codes">
           <code>
@@ -81,20 +81,50 @@
     arrName = new dataType [a1][a2]...[aN]; <b>// where a1, a2, ... aN are the lengths of the 1 to N dimensions respectively</b></code>
       </pre>
       <p class="spacer"></p>
-      <p class = "body">Initialization sets all values of an array to default (null, 0, false, etc).</p>
+      <p class = "body">Initialization sets all values of an array to <em>default</em> (null, 0, false, etc).</p>
       <p class = "body">To find the length of an array or its dimensions:</p>
+      <p></p>
+      <pre class = "codes">
+          <code>
+    arrName.length <b>// int value of the length of the nth dimension of an N-d array</b>
+    arrName[a1].length <b>// int value of the length of row a1 of an N-1 d array</b></code>
+      </pre>
+      <p class = "spacer"></p>
+      <p class = "body">To access a value from an array:</p>
+      <p></p>
+      <pre class = "codes">
+          <code>
+    arrName[a1][a2]...[aN] <b>// item at indexes (a1,a2,...aN)</b>
+    int [] arr = {1, 2, 3};
+    arr[0] <b>// value at index 0, hence 1</b></code>
+      </pre>
+      <p class = "spacer"></p>
+      <p class = "body">To change a value in an array:</p>
+      <p></p>
+      <pre class = "codes">
+          <code>
+    int [] arr = {1, 2, 3};
+    arr[0] = 4; <b>// changes the value of the element at index 0 from 1 to 4</b></code>
+      </pre>
+      <p id = "tips"><br></p>
+      <p class = "basics">Tips</p>
+      <p></p>
+      <p class = "body">If an index negative or greater than length - 1 is used, the <b>ArrayIndexOutOfBoundsException</b> will be thrown.<br>
+        In Java, arrays may be “ragged”, which is to say that different rows may have different lengths.
+      </p>
+      <p class = "spacer"></p>
     </div>
 
     <div class = "tutorial-nav">
       <p class = "nav-subtitle">JUMP TO</p>
       <a class = "nav-option" href="#"> The Basics</a>
       <a class = "nav-option" href="#syntax"> Syntax</a>
-      <a class = "nav-option" href="#"> Tips</a>
+      <a class = "nav-option" href="#tips"> Tips</a>
     </div>
 
   </div>
 
-    
+  <div class = "footer"> copyright 2023 ahuang</div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
