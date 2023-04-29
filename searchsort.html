@@ -63,7 +63,7 @@
       <p class = "body">Searching and sorting data is one of the most common applications of programming.<br>
         This is most commonly used with arrays and arraylists. 
       </p>
-      <p><br></p>
+      <p id = "search"><br></p>
       <a class = "basics">Searching</a>
       <p></p>
       <p class = "body">Searching is when a program looks for the location or index of a specific element or value. 
@@ -72,10 +72,10 @@
       <p class = "spacer"> </p>
       <p class = subtitle>Sequential Search</p>
       <p class = "body">Sequential search iterates through every single element of the data and compares each element to the desired element until the desired one is found, or it has looked through every element in the data. If the element does not exist in the data, <b>-1</b> is returned.</p>
-      <p class = "body">This algorithm does not take advantage of the sorted array and is inefficient, since it may need to search every single element in the data to find out if an element is present.</p>
+      <p class = "body">This algorithm does not take advantage of the sorted array and is inefficient, since it may need to search every single element in the data to find out if an element is present. However, it doesn't need the data to be sorted.</p>
       <p class = "body">The best case occurs when the desired element is the first value in the array or arraylist. The worst case occurs when the desired element is either not present or at the very end or the array or arraylist, as every single element in the data must be iterated through.</p>
       <p class = "body">The time complexity of sequential search is O(n).</p>
-      <p class = "body">Here is an example implementation of sequential search:</p>
+      <p class = "body">Implementation example of sequential search:</p>
         <pre class = "codes">
           <code>
     public int seqSearch(E[] arr, E element) { 
@@ -89,12 +89,33 @@
       </pre>
       <p class = "spacer"> </p>
       <p class = subtitle>Binary Search</p>
+      <p class = "body">Binary search is a much more efficient algorithm than sequential search. It starts by comparing the middle element of the data to the desired element and then halves the remaining amount of data needed to be searched through each time until the element is found or no data remains to be searched.</p>
+      <p class = "body">Since the data is sorted, the algorithm can efficiently reduce the range each time by getting rid of the higher/lower half of the remaining data, hence the name binary search.</p>
+      <p class = "body">This algorithm has time complexity O(log n).</p>
+      <p class = "body">There are two ways to implement this algorithm, as it can be done with iteration using a while loop or with recursion.</p>
+      <p class = "body">Iterative example:</p>
+      <pre class = "codes">
+        <code>
+    public int binarySearch(E [] arr, E element) {
+      int x = 0, y = arr.length-1;
+        while (x <= y) {
+          int m = (x - y) / 2;
+          
+          if (arr[m] == x) return m;
+          
+          if (array[m] < x) x = m + 1;
+          else y = m - 1;
+        }
+          
+        return -1;
+    }</code>
+    </pre>
     </div>
 
     <div class = "tutorial-nav">
       <p class = "nav-subtitle">JUMP TO</p>
       <a class = "nav-option" href="#"> The Basics</a>
-      <a class = "nav-option" href="#"> Searching</a>
+      <a class = "nav-option" href="#search"> Searching</a>
       <a class = "nav-option" href = "#">Sorting</a>
       <a class = "nav-option" href="#">Complexity</a>
     </div>
