@@ -1,0 +1,111 @@
+.title{
+    padding-top: 3rem;
+    font-size: 3rem;
+    color: #B6EADA;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.subtitles{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr;
+}
+
+.grid-line{
+    background: linear-gradient(#343a40, #B6EADA);
+    width: 2.5%;
+    margin-left: 6rem;
+}
+
+.top{
+    padding-left: 5rem;
+}
+
+.mini-title{
+    padding-top: 6rem;
+    font-family: "Inconsolata";
+}
+
+.content-subtitle{
+    font-size: 2rem;
+}
+
+.content-body{
+    font-size: 1rem;
+    color: #B6EADA;
+    text-decoration: none;
+}
+
+.pr-right{
+    padding-top: 1rem;
+}
+
+.learn{
+    background-color: #242031AA;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border: 3.5px solid #B6EADA;
+    border-radius: 10px;
+}
+
+.mini{
+    font-family: "Inconsolata";
+    background-color:#B6EADA;
+    color:#242031;
+    font-weight: bold;
+    padding-left: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.learn-top{
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+}
+
+.learn-description{
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+.button{
+    background: transparent;
+    border-radius: 10px;
+    border: 3px solid #B6EADA;
+    padding: 0.5rem;
+}
+
+.button:focus,
+.button:hover {
+    background: #B6EADA22;
+}
+
+.button:focus .content-body,
+.button:hover .content-body{
+    color: #B6EADA;
+}
+
+.projects-right{
+    padding-bottom: 6rem;
+}
+
+.line-dark{
+    background: linear-gradient(#B6EADA, #343a40);
+    width: 2.5%;
+    margin-left: 6rem;
+}
+
+.line-light{
+    background: linear-gradient(#343a40, #B6EADA);
+    width: 2.5%;
+    margin-left: 6rem;
+}
+
+.space{
+    height: 1rem;
+}

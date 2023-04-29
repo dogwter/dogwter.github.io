@@ -1,0 +1,18 @@
+.project{
+    display: grid;
+    padding-top: 2rem;
+    grid-template-columns: 5fr 6fr;
+}
+
+.media{
+    margin-left: 5rem;
+}
+
+.description-title{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.date{
+    font-family: "Inconsolata";
+}

@@ -88,3 +88,22 @@
     text-decoration: none;
 }
 
+.footer{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    width:100%;
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    background-color: #08070b;
+    color:#afc0d1;
+}
+
+.left{
+    margin-left: 5rem;
+}
+
+.right{
+    margin-right: 5rem;
+    text-align: right;
+}
