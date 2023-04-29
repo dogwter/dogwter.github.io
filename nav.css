@@ -44,7 +44,7 @@
 }
 body {
     margin: 0;
-    font-family: var(--my-font-sans-serif);
+    font-family: "Inter";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
