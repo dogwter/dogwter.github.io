@@ -1,3 +1,14 @@
 .nof {
     min-height: calc(100vh - 40px);
 }
+
+.link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.link:focus,
+.link:hover{
+    color: #FFFFFF;
+    font-weight: bold;
+}

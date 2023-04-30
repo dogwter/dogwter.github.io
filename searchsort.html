@@ -96,20 +96,40 @@
       <p class = "body">Iterative example:</p>
       <pre class = "codes">
         <code>
-    public int binarySearch(E [] arr, E element) {
+    public int binarySearch(int [] arr, int element) {  <b>// finding element in integer array arr</b>
       int x = 0, y = arr.length-1;
-        while (x <= y) {
-          int m = (x - y) / 2;
+        while (x <= y) {  <b>// while there is still data to be searched</b>
+          int m = x + (y - x) / 2;
           
-          if (arr[m] == x) return m;
+          if (arr[m] == x) return m; <b>// return the index if the element is found</b>
           
-          if (array[m] < x) x = m + 1;
-          else y = m - 1;
+          if (array[m] < x) x = m - 1; <b>// halve range accordingly</b>
+          else y = m + 1;
         }
           
-        return -1;
+        return -1; <b>// return -1 if element was not in the data</b>
     }</code>
     </pre>
+    <p class = "spacer"></p>
+    <p class = "body">Recursive Example:</p>
+    <pre class = "codes">
+      <code>
+    public int binarySearch(int array[], int x, int a, int b) {
+
+      if (b >= a) { <b>// if there is still data to be searched</b>
+            int m = a + (b - a) / 2;
+      
+            if (array[m] == x) return m; <b>// base case: return the index if the element is found</b>
+      
+            if (array[m] > x) return binarySearch(array, x, a, m - 1); <b>// halve range accordingly</b>
+            else return binarySearch(array, x, m + 1, y);
+      }
+      
+      return -1; <b>// return -1 if element was not in the data</b>
+      
+    }</code>
+    </pre>
+    <p class = "body">If you are not familiar with recursion, check out <a class = "link" href = "recursion.html">my tutorial</a>.</p>
     </div>
 
     <div class = "tutorial-nav">
