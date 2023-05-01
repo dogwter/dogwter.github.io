@@ -114,29 +114,40 @@
     <p class = "body">Recursive Example:</p>
     <pre class = "codes">
       <code>
-    public int binarySearch(int array[], int x, int a, int b) {
+    public int binarySearch(int arr[], int x, int a, int b) {
 
       if (b >= a) { <b>// if there is still data to be searched</b>
             int m = a + (b - a) / 2;
       
-            if (array[m] == x) return m; <b>// base case: return the index if the element is found</b>
+            if (arr[m] == x) return m; <b>// base case: return the index if the element is found</b>
       
-            if (array[m] > x) return binarySearch(array, x, a, m - 1); <b>// halve range accordingly</b>
-            else return binarySearch(array, x, m + 1, y);
+            if (arr[m] > x) return binarySearch(array, x, a, m - 1); <b>// halve range accordingly</b>
+            else return binarySearch(arr, x, m + 1, y);
       }
       
       return -1; <b>// return -1 if element was not in the data</b>
-      
+
     }</code>
     </pre>
+    <p class = "spacer"></p>
     <p class = "body">If you are not familiar with recursion, check out <a class = "link" href = "recursion.html">my tutorial</a>.</p>
+    <p id = "sort"><br></p>
+    <a class = "basics">Sorting</a>
+    <p></p>
+      <p class = "body">Sorting is when a program organizes comparable elements of the same type in ascending or descending order.<br>
+        This allows for more efficient searching, as previously mentioned. There are recursive and non-recursive sorting algorithms of varying efficiencies.
+      </p>
+      <p class = "spacer"> </p>
+      <p class = "subtitle">Bubble Sort</p>
+      <p class = "body">Bubble Sort is a simple sorting algorithm that repeatedly iterates through data by comparing each pair of adjacent elements, and swapping them if they are in the wrong order. The algorithm gets its name from the way the elements "bubble" to the top of the list with each full pass. For each full pass, the range of data which needs to be passed through decreases by 1, until there is a pass where no swaps are made and the data is fully sorted.</p>
+
     </div>
 
     <div class = "tutorial-nav">
       <p class = "nav-subtitle">JUMP TO</p>
       <a class = "nav-option" href="#"> The Basics</a>
       <a class = "nav-option" href="#search"> Searching</a>
-      <a class = "nav-option" href = "#">Sorting</a>
+      <a class = "nav-option" href = "#sort">Sorting</a>
       <a class = "nav-option" href="#">Complexity</a>
     </div>
 
