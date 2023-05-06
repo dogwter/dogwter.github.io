@@ -140,7 +140,35 @@
       <p class = "spacer"> </p>
       <p class = "subtitle">Bubble Sort</p>
       <p class = "body">Bubble Sort is a simple sorting algorithm that repeatedly iterates through data by comparing each pair of adjacent elements, and swapping them if they are in the wrong order. The algorithm gets its name from the way the elements "bubble" to the top of the list with each full pass. For each full pass, the range of data which needs to be passed through decreases by 1, until there is a pass where no swaps are made and the data is fully sorted.</p>
-      <p class = "body"></p>
+      <p class = "body">The best-case scenario for this sorting algorithm would be to already have a sorted dataset, and the worst case scenario for the algorithm would be to have a dataset with its data in reverse order.</p>
+      <p class = "body">This algorithm has time complexity <em>O(n&sup2;)</em>, since in the worst case (when the data is in reverse order), <b>n(n-1) * 0.5</b> swaps must be made. Since the algorithm is in-place (it does not create any new space for sorting purposes), it has a space complexity of <em>O(1)</em>.</p>
+      <p class = "body">This algorithm is implemented iteratively: </p>
+      <pre class = "codes">
+        <code>
+    int[] bubbleSort (int[] arr){
+
+      int swaps = -1; <b>// swap counter variable</b>
+
+      while (swaps != 0){ <b>// condition for unsorted array</b>
+	    swaps = 0;
+
+	    for (int i = 0; i < arr.length - 1; i++){ <b>// decreases the range which needs to be searched</b>
+	      for (int j = 0; j < arr.length - i - 1; j++){
+		      if (arr[j] > arr[j + 1]){ <b>// swap elements if needed</b>
+		        int temp = arr[j];
+		        arr[j] = arr[j + 1];
+		        arr[j + 1] = temp;
+		        swaps++;
+		      }
+	      }
+	    }
+
+      }
+      return arr; <b>// returns the sorted array</b>
+    }</code>
+      </pre>
+      <p class = "spacer"></p>
+      <p class = "subtitle">Selection Sort</p>
     </div>
 
     <div class = "tutorial-nav">

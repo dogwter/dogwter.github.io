@@ -49,9 +49,14 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: var(--my-white);
+    overflow-x: hidden;
     background-color: var(--my-gray-dark);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .navbar-brand {
