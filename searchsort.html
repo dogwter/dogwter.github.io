@@ -164,11 +164,48 @@
 	    }
 
       }
+
       return arr; <b>// returns the sorted array</b>
+
     }</code>
       </pre>
       <p class = "spacer"></p>
       <p class = "subtitle">Selection Sort</p>
+      <p class = "body">Selection Sort is a sorting algorithm that sorts an array by repeatedly finding the maximum element from the unsorted part of the array and swapping it with the last element of the unsorted part of the array. The range of the unsorted part decreases by 1 each time until the entire array is sorted. </p>
+      <p class = "body">This algorithm does not have a best or worst case scenario. It has time complexity O(n&sup2;) since n(n-1) * 0.5 swaps must be made. Since the algorithm is in-place (it does not create any new space for sorting purposes), it has a space complexity of O(1).</p>
+      <p class = "body">This algorithm is implemented iteratively:</p>
+      <pre class = "codes">
+        <code>
+    int[] selectionSort (int[] arr){
+
+      for(int i = arr.length; i > 1; i--){ <b>// decreases range of unsorted part</b>
+
+        int max = 0; <b>// variable for index of element with the maximum value within the range</b>
+
+        for(int x = 1; x < i; x++){
+          if(arr[x] > arr[max]) max = x; <b>// adjust max if needed</b>
+        }
+        
+        int temp = arr[i-1];  <b>// swaps the max element and the i-1th element</b>
+        arr[i-1] = arr[max];
+        arr[max] = temp;
+
+      }
+            
+      return arr; <b>// returns the sorted array</b>
+
+    }</code>
+      </pre>
+      <p class = "spacer"></p>
+      <p class = "body">Interested in more sorting algorithms? Check out <a class = "link" href = "projects.html">my project</a> on a non-comparative sorting algorithm.</p>
+      <p id = "comp"><br></p>
+      <a class = "basics">Complexity</a>
+      <p></p>
+      <p class = "body">Ideally, programming algorithms should be as efficient as possible due to limits in storage, memory, and time.</p>
+      <p class = "body">To compare efficiencies, big O notation is used. The amount of time or space an algorithm takes is called its time or space complexity.</p>
+      <p class = "body">Big O notation utilizes the omega (&#937;) symbol to represent the lowest or best case complexity for an algorithm, and capital O (O) to represent the worst or highest complexity for an algorithm. </p>
+      <p class = "body">The notation is in the syntax O(f(n)) where f is any function and n increases without bound. f(n) represents the space or time the algorithm takes.</p>
+      <p class = "spacer"></p>
     </div>
 
     <div class = "tutorial-nav">
@@ -176,7 +213,7 @@
       <a class = "nav-option" href="#"> The Basics</a>
       <a class = "nav-option" href="#search"> Searching</a>
       <a class = "nav-option" href = "#sort">Sorting</a>
-      <a class = "nav-option" href="#">Complexity</a>
+      <a class = "nav-option" href="#comp">Complexity</a>
     </div>
 
   </div>
