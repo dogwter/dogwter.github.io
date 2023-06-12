@@ -48,9 +48,14 @@
 }
 
 .info-body{
+    color: #afc0d1;
+    line-height: 2rem;
+    font-size: 1rem;
     padding-left: 5rem;
     padding-right: 20rem;
     margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
 }
 
 .grid-body{
@@ -106,4 +111,15 @@
 .right{
     margin-right: 5rem;
     text-align: right;
+}
+
+.link{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.link:focus,
+.link:hover{
+    color: #FFFFFF;
+    font-weight: bold;
 }
