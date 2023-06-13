@@ -12,6 +12,10 @@
     min-width: 80%;
 }
 
+.tutorial-body1{
+    margin-left: 5rem;
+}
+
 .tutorial-nav{
     position: fixed;
     margin-left: 80%;
@@ -102,4 +106,13 @@
     background-color: #242031;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+}
+
+.level{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+.level-text{
+    padding-right: 2rem;
 }

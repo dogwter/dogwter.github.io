@@ -58,13 +58,36 @@
   <div class="tutorial">
     <div class ="tutorial-body" style="float:left">
       <p class = tutorial-title>recursion</p>
+      <a class = "basics">The Basics</a>
+      <p></p>
+      <p class = "body">Recursion is when a method calls itself in a program, with methods which do so being called recursive. This can be used to simplify many processes but must be done carefully as increases in complexity may lead to infinite loops where the program never stops calling itself.</p>
+      <p class = "body">Every recursive method needs a base case, which is the case in which the method stops calling itself. Aside from the base case, the recursive method needs to call itself to move towards the base case. This can be useful since many algorithms repeatedly implement steps, and recursion simplifies the code, alongside making it easier to read and maintain. It is worth noting that most recursive methods can be rewritten non-recursively.</p>
+      <p class = "body">Here is an example of using recursion to find the factorial of a number x:</p>
+        <pre class = "codes">
+          <code>
+    int factorial(int x) {
+
+      if(x <= 1) return 1; <b>// the base case</b>
+      else return x * factorial(x - 1); <b>// the method calls itself to advance towards the base case</b>
+
+    }</code>
+      </pre>
+      <p class = "spacer" id ="call"> </p>
+      <a class = "basics">Call Stacks</a>
+      <p></p>
+      <p class = "body">The Java Virtual Machine (JVM) keeps track of the methods being run using a call stack. Methods which enter the stack last will exit the stack first, but the methods are only allowed to exit the stack once recursion has ended, meaning the base case has eventually been met. If an infinite loop occurs, the stack will eventually run out of space and a stack overflow error will occur.</p>
+      <p class = "spacer" id = "tips"></p>
+      <a class = "basics">Tips</a>
+      <p></p>
+      <p class = "body">When working with recursion, it is important to carefully check and test the method and base case to make sure that the base case is always attainable. It's also important to make sure to include a base case and to make sure that such is correct for the function of the method. If recursion proves to make the problem even more complicated, the method can always be re-written non-recursively. </p>
+      <p class = "spacer"></p>
     </div>
 
     <div class = "tutorial-nav">
       <p class = "nav-subtitle">JUMP TO</p>
       <a class = "nav-option" href="#"> The Basics</a>
-      <a class = "nav-option" href="#"> Call Stacks</a>
-      <a class = "nav-option" href="#"> Tips</a>
+      <a class = "nav-option" href="#call"> Call Stacks</a>
+      <a class = "nav-option" href="#tips"> Tips</a>
     </div>
 
   </div>
